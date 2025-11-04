@@ -14,11 +14,19 @@ using namespace std;
 class Pingouin : public Aquatique, public Terrestre {
 private:
     std::string nom;
+    double vitesseGlise;
 
 public:
     Pingouin(std::string nom, double vitesseNage, double vitesseMarche);
+    Pingouin(const Pingouin& orig);
+
     void sePresenter() const;
 
+    double getVitesseGlisse() const;
+    void setVitesseGlisse(double nouvelleVitesse);
+
+    void setVitesseNage(double nouvelleVitesse) override;
+    void setVitesseMarche(double nouvelleVitesse) override;
 };
 
 #endif

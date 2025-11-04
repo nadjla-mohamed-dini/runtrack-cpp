@@ -8,7 +8,9 @@ using namespace std;
 int main() {
     Pingouin pingouin1 ("Ronald", 2.0, 3.5);
     pingouin1.sePresenter();
-    pingouin1.nager();
-    pingouin1.marcher();
+    std::cout<<"\nCopie de Ronald";
+    Pingouin copy1(pingouin1);
+    copy1.setVitesseGlisse(5.0);
+    copy1.sePresenter();
     return 0;
 }
